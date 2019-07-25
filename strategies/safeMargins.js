@@ -1,60 +1,3 @@
-# Blockbid CCXT Tutorials
-
-We thought it would be useful to show our users how to trade programatically at Blockbid. This repo will eventually contain a series of tutorials ranging from super beginner to advanced. Please use issues to suggest ideas about what you would like to see.
-
-## Requirements
-
-- Basic understanding of Javascript
-- Basic understanding of trading
-- NodeJS
-
-## Getting Started
-
-After you have cloned the repo.
-
-1.  Generate an API key on your [settings page](https://platform.blockbid.io/settings/preferences)
-2.  Edit `stragies/safeMargins.js` to add your new API key
-3.  Execute the commands below
-
-```
-npm i
-npm run start
-```
-
-## Safe High Margin Limit Order Tutorial
-
-This tutorial will show you how to periodically set orders with high margins based off the average global market price.
-
-It is actually quite easy to write trading bots, and this one in particular is really only around 30-40 lines of code.
-
-It expects you to have two currencies e.g. BTC TUSD
-
-It will then place one sell order and one buy order every minute with fluctuating prices on the BTCTUSD market.
-
-We call it safe because the script is set to place orders 20% above and below market price, ensuring no one will likely match them, but if they do you should be happy.
-
-The code is fully documentated and you should be able to read it even if you have no programming experience.
-
-We love all feedback!
-
-Successful output should look like:
-
-```
-Starting safe margin limit order strategy
-Fetching current orders on BTC/TUSD
-Cancelling current orders on BTC/TUSD
-Finished cancelling 2 open orders
-Fetching the global average price for BTC/TUSD
-The global average price for BTC/TUSD is 10055.30417295
-By our calculations we want to
-Buy 0.0003019033084706648 BTC when the price is 8044.24333836
-Sell 0.0011350974232612501 TUSD when the price is 12066.36500754
-Successfully placed orders
-```
-
-Here is the contents of the script
-
-```js
 const ccxt = require("ccxt");
 const axios = require("axios"); // Used for API requests
 
@@ -157,4 +100,3 @@ const safeMargins = () => {
   setInterval(strategy, shiftSeconds * 1000);
 };
 module.exports = safeMargins;
-```

@@ -1,0 +1,25 @@
+{
+  "name": "blockbid-ccxt-tutorials",
+  "version": "1.0.0",
+  "description": "Helping our users understand how to trade programatically.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomasdavis/blockbid-ccxt-tutorials.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomasdavis/blockbid-ccxt-tutorials/issues"
+  },
+  "homepage": "https://github.com/thomasdavis/blockbid-ccxt-tutorials#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "ccxt": "blockbid/ccxt#exchange-blockbid",
+    "lodash": "^4.17.10"
+  }
+}
