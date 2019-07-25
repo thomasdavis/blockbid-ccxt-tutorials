@@ -1,5 +1,7 @@
 # Blockbid CCXT Tutorials
 
+[blockbid.io](https://platform.blockbid.io/trade/btctusd) - Australian crypto exchange, no KYC required
+
 We thought it would be useful to show our users how to trade programatically at Blockbid. This repo will eventually contain a series of tutorials ranging from super beginner to advanced. Please use issues to suggest ideas about what you would like to see.
 
 ## Requirements
