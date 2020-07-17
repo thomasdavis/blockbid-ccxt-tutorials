@@ -20,6 +20,6 @@
   "dependencies": {
     "axios": "^0.19.0",
     "ccxt": "blockbid/ccxt#exchange-blockbid",
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.19"
   }
 }
